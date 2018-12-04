@@ -1,34 +1,41 @@
-// document.addEventListener('DOMcontentLoaded', () => {
-//   //Add new card button
-//   let addCard = document.querySelector('.add-card');
-//   addCard.addEventListener('click', () => {
-//     console.log('Clicked!');
-//   });
-// });
-var title = document.getElementById('title')
-var question = document.getElementById('question')
-var answer = document.getElementById('answer')
+document.addEventListener('DOMContentLoaded', () => {
+  var newCardForm = document.getElementById('new-card-form');
+  var title = document.getElementById('card-title')
+  var question = document.getElementById('card-question')
+  var answer = document.getElementById('card-answer')
+  var submit_button = document.getElementById('new-card-submit')
+  var flashCards = document.getElementsByClassName('cards-container')
+  var cards = [];
+
+  submit_button.addEventListener ('click', (event) => {
+    event.preventDefault()
+    title = title.value
+    question = question.value
+    answer = answer.value
+    
+    makeCard(title, question, answer)
+  })
+
+  function  makeCard  (title, question, answer) {
+    cards.push ({title: title, question: question, answer: answer})
+    console.log (cards)
+  }
+
+  function flashCards () {
+    cards.map((value, index) => {
+    var newElement
+    var newCard
+    })
+
+  }
 
 
-function addcard(title = [], question = [], answer = []) {
-  card = {title, question, answer}
-
-}
-
-addCard.addEventListener('click', () => {
-  console.log('Clicked!');
 
 
+  function ans() {
 
-function ans() {
-  
-  console.log('Clicked!')
-}
+  }
 
 
+});
 
-// const hello = (greeting) => {
-//   console.log(greeting);
-// }
-
-// hello("Sup!");
